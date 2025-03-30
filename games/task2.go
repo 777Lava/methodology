@@ -1,20 +1,12 @@
-package main
+package games
 
 import (
 	"fmt"
 	"math/rand"
 )
 
-func main() {
+func Game2(userName string) {
 
-	var userName string
-	println("Welcome to the Brain Games!")
-	print("May I have your name? ")
-	_,err := fmt.Scan(&userName)
-	if err != nil {
-		println("Invalid input. let's try again")
-	}
-	fmt.Printf("Hello, %s!\n", userName)
 	println("What number is missing in the progression?")
 	for {
 		b1 := rand.Intn(10-1) + 1
@@ -40,7 +32,6 @@ func main() {
 		if err != nil {
 			println("Invalid input. let's try again")
 		}
-
 		if answerUser == arr[miss] {
 			fmt.Println("Correct!")
 		} else {

@@ -1,4 +1,4 @@
-package main
+package games
 
 import (
 	"fmt"
@@ -6,21 +6,10 @@ import (
 	"math/rand"
 )
 
-func main() {
-
-	var userName string
-	println("Welcome to the Brain Games!")
-	print("May I have your name? ")
-	_, err := fmt.Scan(&userName)
-	if err != nil {
-		println("Invalid input. let's try again")
-	}
-	fmt.Printf("Hello, %s!\n", userName)
+func Game1(userName string) {
 	println("Find the smallest common multiple of given numbers.")
 	for {
-		a := rand.Intn(100)
-		b := rand.Intn(100)
-		c := rand.Intn(100)
+		a, b, c := rand.Intn(100), rand.Intn(100), rand.Intn(100)
 
 		fmt.Printf("Question: %d %d %d\n", a, b, c)
 		fmt.Print("Your answer: ")
